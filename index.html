@@ -98,7 +98,7 @@
 
                 <div id="how-much-form">
                     <div class="form-content">
-                        <a id="x-btn">
+                        <a id="x-btn" class="x-btn">
                             <img class="x__img" src="img/x.png">
                         </a>
                         <div class="form-title">
@@ -109,16 +109,43 @@
 
                         <div class="da-form">
                             <form class="simple-form">
-                                <label class='simple-label' for="fname">Ваше имя</label>
+                                <label class='simple-label' for="fname">Ваше имя<span style="color:red;">*</span></label>
                                 <input class="simple-input" type="text" placeholder="Богдана">
-                                <label class='simple-label' for="telephone">Телефон</label>
+                                <label class='simple-label' for="telephone">Телефон<span style="color:red;">*</span></label>
                                 <input class="simple-input" type="tel" placeholder="+38 (093) 123 45 67">
                                 <label class='simple-label' for="fname">Комментарий</label>
                                 <textarea class="simple-textarea" rows="3" cols="40"></textarea>
+                                <div class="form-buttons">
+                                    <input class="simple-submit" type="submit" value="Отправить">
+                                    <input id="cancel-form" class="cancel-form simple-submit" type="submit" value="Отменить">
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
+
+                <div id="order-call">
+                    <div class="form-content">
+                        <a id="x-btn2" class="x-btn">
+                            <img class="x__img" src="img/x.png">
+                        </a>
+                        <div class="form-title">
+                            <span class="form-title__text">
+                                Заказать звонок
+                            </span>
+                        </div>
+
+                        <div class="da-form">
+                            <form class="simple-form" style="display:flex;align-items:center;">
+                                <div class="order-individual">
+                                    <label class='simple-label' for="telephone">Телефон<span style="color:red;">*</span></label>
+                                    <input class="order-input simple-input" type="tel" placeholder="+38 (093) 123 45 67">
+                                </div>
+                                <input class="order-submit simple-submit" type="submit" value="Заказать">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
             <!--forms-->
 
@@ -503,7 +530,7 @@
                         <span class="footer-tel__text">+38 (044) 501 16 75</span>
                     </div>
                     <div class="footer-btn">
-                        <button class="footer-btn__btn">Заказать звонок</button>
+                        <button id="call-form-call" class="footer-btn__btn">Заказать звонок</button>
                     </div>
                 </div>
                 <div class="footer__third">
