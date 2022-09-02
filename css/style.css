@@ -164,6 +164,7 @@ li{
 }
 
 .calculator__btn{
+    cursor: pointer;
     font-weight: 700;
     font-size: 18px;
     color:black;
@@ -172,14 +173,15 @@ li{
     border-radius: 20px;
     background: #FFBD4C;
     text-decoration: none;
-    max-width:230px;
-    height:31px;
+    max-width: 247px;
+    height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: -4px 4px 4px rgba(33, 70, 102, 0.1);
     transition: .2s;
     margin-top:40px;
+    border:none;
 }
 
 .calculator__btn:hover {
@@ -546,8 +548,8 @@ margin-left: 1%;
 }
 
 .connection{
-    min-width: 550px;
-    height:550px;
+    min-width: 520px;
+    height:520px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -817,4 +819,259 @@ margin-left: 1%;
     #footer{
         background-position: 180%;
     }
+}
+
+@media screen and (max-width: 550px) {
+    .heeader-element__block{
+        display:block !important;
+    }
+
+    .ul__element{
+        display: none;
+    }
+
+    .big-image-content{
+        display:none;
+    }
+
+    .blocks-info {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ".";
+        margin-top: 150px;
+    }
+
+    .block{
+        margin-bottom: 25%;
+        margin-left: 15%;
+    }
+
+    .first__logo::before, .second__logo::before, .third__logo::before, .fourth__logo::before{
+        left: 25%;
+        width: 30%;
+    }
+
+    .list-of-companies {
+        margin-top: 35px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            ".";
+    }
+
+    .mapa-img__img {
+        width: 399px;
+    }
+
+    .geography-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .geography__title{
+        text-align: center;
+    }
+
+    .geography__item{
+        margin-left:15px;
+        font-size: 20px;
+    }
+
+    .logistic-img__img{
+        margin-left:0%;
+        padding-right: 0px;
+    }
+
+    .geography-img__img{
+        margin-left:0;
+        width:400px;
+    }
+
+    .types__list{
+        flex-direction: column;
+    }
+
+    .first-page{
+        margin-right:0;
+        margin-left:30px;
+    }
+
+    .second-page{
+        margin-right:0;
+        margin-left:30px;
+    }
+
+    .types__element{
+        width: auto;
+    }
+
+    .geography__eleemnt {
+        margin-left: 10%;
+    }
+
+    .inter-end{
+        flex-direction: column;
+    }
+
+    .flash-map__img{
+        height: 350px;
+        width: 350px;
+    }
+
+    .connection{
+        height:550px;
+        min-width: 350px;
+    }
+
+    .imgmark{
+        width: auto;
+        height: 70%;
+    }
+
+    .imgtel{
+        width: auto;
+        height: 65%;
+    }
+
+    .imgmail{
+        width: auto;
+        height: 105%;
+    }
+
+    .imgclock{
+        width: auto;
+        height: 130%;
+    }
+
+    .pokazat{
+        display: flex;
+    flex-direction: column;
+    }
+
+    #footer{
+        background-image:none;
+    }
+
+    .footer__third{
+        display:none;
+    }
+
+    .connection__btn{
+        margin-left: 5%;
+    }
+
+    .company{
+        margin: 20px 10px;
+    }
+    .calculator-offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*forms*/
+
+#x-btn{
+    float:right;
+    cursor: pointer;
+}
+
+#how-much-form{
+    display: none;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width:470px;
+    height:550px;
+    position: fixed;
+    z-index: 99;
+    left:37%;
+    bottom:15%;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:20px;
+}
+
+.form-title__text{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+.simple-label{
+    margin:25px 0 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.simple-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-input{
+    background: #EDF5F8;
+    box-shadow: inset -4px 4px 4px rgba(41, 35, 92, 0.05);
+    border-radius: 12px;
+    padding:15px 15px;
+    border:none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.simple-textarea{
+    background: #EDF5F8;
+    box-shadow: inset -4px 4px 4px rgba(41, 35, 92, 0.05);
+    border-radius: 12px;
+    padding:15px 15px;
+    border:none;
+    resize: none;
+    height:90px;
+}
+
+/* scrollup */
+
+#myBtn {
+    width:80px;
+    height:80px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-image: url('../img/scrollup.png'); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    background-size: contain;
+    transition:.5s;
+    opacity:.3;
+}
+
+#myBtn:hover{
+    opacity:1;
 }

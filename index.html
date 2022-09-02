@@ -20,7 +20,7 @@
 
             <ul class="list">
 
-                <li class="ul__element">
+                <li class="heeader-element__block ul__element">
                     <div class="logo">
                         <a href="#"><img id="logo__img" src="img/logo.png"></a>
                     </div>
@@ -94,6 +94,34 @@
 
             </ul>
 
+            <!--forms-->
+
+                <div id="how-much-form">
+                    <div class="form-content">
+                        <a id="x-btn">
+                            <img class="x__img" src="img/x.png">
+                        </a>
+                        <div class="form-title">
+                            <span class="form-title__text">
+                                Расчитать стоимость
+                            </span>
+                        </div>
+
+                        <div class="da-form">
+                            <form class="simple-form">
+                                <label class='simple-label' for="fname">Ваше имя</label>
+                                <input class="simple-input" type="text" placeholder="Богдана">
+                                <label class='simple-label' for="telephone">Телефон</label>
+                                <input class="simple-input" type="tel" placeholder="+38 (093) 123 45 67">
+                                <label class='simple-label' for="fname">Комментарий</label>
+                                <textarea class="simple-textarea" rows="3" cols="40"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            <!--forms-->
+
         </header>
 
         <div class="main-content">
@@ -110,9 +138,9 @@
                     <span class="calculator__text-small">
                         Международные грузоперевозки
                     </span>
-                    <a href="#" class="calculator__btn">
+                    <button id="how-much-btn" class="calculator__btn">
                         Рассчитать стоимость
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -432,13 +460,13 @@
                            Приглашаем в наш офис по адресу:
                         </span>
                      
-                        <span class="connection__text"><img class="connection__img" src="img/marksmall.png">ул. Глубочицкая, 17 Д, оф. 304, Киев</span>
-                        <span class="connection__text"><img class="connection__img" src="img/tel.png">+38 (044) 501 16 75<a href="#" id="show-numbers">показать больше</a></span>
-                        <a href="#" class="connection__text"><img class="connection__img" src="img/mail.png">relanta2007@gmail.com</a>
-                        <span class="connection__text"><img class="connection__img" src="img/clocksmall.png">Пн-Пт с 09:00 до 18:00</span>
-                        <a href="#" class="connection__btn calculator__btn">
+                        <span class="connection__text"><img class="imgmark connection__img" src="img/marksmall.png">ул. Глубочицкая, 17 Д, оф. 304, Киев</span>
+                        <span class="connection__text"><img class="imgtel connection__img" src="img/tel.png"><span class="pokazat">+38 (044) 501 16 75<a href="#" id="show-numbers">показать больше</a></span></span>
+                        <a href="#" class="connection__text"><img class="imgmail connection__img" src="img/mail.png">relanta2007@gmail.com</a>
+                        <span class="connection__text"><img class="imgclock connection__img" src="img/clocksmall.png">Пн-Пт с 09:00 до 18:00</span>
+                        <button class="connection__btn calculator__btn">
                             Заказать консультацию
-                        </a>
+                        </button>
                      </div>
                  </div>
              </div>
@@ -475,12 +503,12 @@
                         <span class="footer-tel__text">+38 (044) 501 16 75</span>
                     </div>
                     <div class="footer-btn">
-                        <a href="#" class="footer-btn__btn">Заказать звонок</a>
+                        <button class="footer-btn__btn">Заказать звонок</button>
                     </div>
                 </div>
                 <div class="footer__third">
                     <div class="footer-list">
-                    
+
                         <div class="footer-list__before">
                             <a href="#" class="footer-list__element">Главная</a>
                         </div>
@@ -493,10 +521,13 @@
                         <div class="footer-list__before">
                             <a href="#" class="footer-list__element">Контакты</a>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
+            <script src="js/scrollup.js"></script>
+            <script src="js/forms.js"></script>
+            <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
         </footer>
     </div>
 </body>
