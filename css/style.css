@@ -16,6 +16,11 @@ html{
     margin-top:30px;
 }
 
+#burger{
+    display:none;
+    z-index: 100;
+}
+
 /* Header */
 
 li{
@@ -730,11 +735,16 @@ margin-left: 1%;
     }
 }
 
+
 @media screen and (max-width: 1024px) {
     .big-image-content::after{
         bottom: 88%;
     }
-
+    .first-page {
+        margin-right: 5%;}
+        .logistic-img__img {
+            padding-right: 40px;
+        }
     .list{
         height: 150px;
     }
@@ -822,10 +832,34 @@ margin-left: 1%;
         background-position: 180%;
     }
 }
+#mob-menu{
+    display:none;
+    position: absolute;
+    background:#5589C9;
+    border-radius: 20px;
+    left: 45%;
+    width:250px;
+    z-index: 50;
+}
 
+.mob__element{
+    margin-bottom:15px;
+}
+
+.mob__a{
+    color:white;
+    text-decoration: none;
+    font-size:25px;
+    font-weight: 400;
+}
 @media screen and (max-width: 550px) {
+
     .heeader-element__block{
         display:block !important;
+    }
+
+    .list{
+        justify-content: space-between;
     }
 
     .ul__element{
@@ -877,7 +911,11 @@ margin-left: 1%;
     }
 
     .mapa-img__img {
-        width: 399px;
+        width: 364px;
+    }
+
+    .mapa__text{
+        text-align: center;
     }
 
     .geography-content {
@@ -903,7 +941,7 @@ margin-left: 1%;
 
     .geography-img__img{
         margin-left:0;
-        width:400px;
+        width:373px;
     }
 
     .types__list{
@@ -912,12 +950,12 @@ margin-left: 1%;
 
     .first-page{
         margin-right:0;
-        margin-left:30px;
+        margin-left: 10px;
     }
 
     .second-page{
         margin-right:0;
-        margin-left:30px;
+        margin-left: 10px;
     }
 
     .types__element{
@@ -940,6 +978,10 @@ margin-left: 1%;
     .connection{
         height:550px;
         min-width: 350px;
+    }
+
+    .footer__first, .footer__second, .footer__third{
+        margin-right: 40px;
     }
 
     .imgmark{
@@ -988,13 +1030,87 @@ margin-left: 1%;
         align-items: center;
         text-align: center;
     }
+    #burger{
+        display:block;
+    }
+
+    .burger__icon{
+        width:50px;
+        height:auto;
+    }
+
+    .x__icon{
+        display:none;
+        width:30px;
+        height:auto;
+        margin-top:10px;
+        margin-right:10px;
+    }
+
 }
 
 /*forms*/
+#raskr-id{
+    display:none;
+    transition:.2s;
+    position: absolute;
+}
 
-.x-btn{
-    float:right;
+.lang-var{
+    color: #AEACAC;
+    text-decoration: none;
+}
+
+.lang-var:hover{
+    color: #1A262E;
+}
+
+#show-numbers{
+    color: -webkit-link;
     cursor: pointer;
+    text-decoration: underline;
+}
+
+#show-numbers:active {
+    color: -webkit-activelink;
+}
+.x-btn{
+    cursor: pointer;
+    margin-left: 97%;
+}
+
+#show-more{
+    display: none;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 362px;
+    height: 398px;
+    position: fixed;
+    z-index: 101;
+    left: 39%;
+    bottom: 34%;
+    padding-left:50px;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+#zakaz-consl{
+    display: none;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 362px;
+    height: 380px;
+    position: fixed;
+    z-index: 101;
+    left: 39%;
+    bottom: 34%;
+    padding-left:50px;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+.consl-tel{
+    margin-bottom:30px;
 }
 
 #order-call{
@@ -1004,7 +1120,7 @@ margin-left: 1%;
     width: 362px;
     height: 310px;
     position: fixed;
-    z-index: 99;
+    z-index: 101;
     left: 39%;
     bottom: 34%;
     padding-left:50px;
@@ -1030,7 +1146,7 @@ margin-left: 1%;
     width:470px;
     height:550px;
     position: fixed;
-    z-index: 99;
+    z-index: 101;
     left:37%;
     bottom:15%;
     padding-left:50px;
@@ -1107,6 +1223,23 @@ margin-left: 1%;
     width: 55%;
 }
 
+.nums-form{
+    margin-left:15%;
+}
+
+.nums-title{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.nums-text{
+    font-size:20px;
+}
+
+.nums-contact{
+    margin-bottom: 15px;
+}
+
 /* scrollup */
 
 #myBtn {
@@ -1132,4 +1265,110 @@ margin-left: 1%;
 
 #myBtn:hover{
     opacity:1;
+}
+
+@media screen and (max-width: 550px) {
+    #myBtn{
+        background-repeat: no-repeat;
+        width: 67px;
+    height: 65px;
+    }
+
+    .simple-submit {
+        cursor: pointer;
+        padding: 10px 9px;
+        background: #5589C9;
+        border-radius: 12px;
+        border: 0;
+        color: white;
+        width: 45%;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    .form-title__text {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    #how-much-form {
+        display: none;
+        background: white;
+        border-radius: 20px;
+        width: 270px;
+        height: 577px;
+        position: fixed;
+        z-index: 101;
+        left: 13%;
+        bottom: 7%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
+
+    #zakaz-consl {
+        display: none;
+        background: white;
+        border-radius: 20px;
+        width: 270px;
+        height: 431px;
+        position: fixed;
+        z-index: 99;
+        left: 13%;
+        bottom: 16%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
+
+    #order-call {
+        display: none;
+        background: white;
+        border-radius: 20px;
+        width: 270px;
+        height: 299px;
+        position: fixed;
+        z-index: 99;
+        left: 13%;
+        bottom: 30%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
+
+    .cancel-form{
+        color:#5589C9;
+        background: white;
+        border:2px solid #5589C9;
+    }
+
+    .x-btn{
+        cursor: pointer;
+        margin-left: 100%;
+    }
+
+    #show-more {
+        display: none;
+        background: #FFFFFF;
+        border-radius: 20px;
+        width: 266px;
+        height: 412px;
+        position: fixed;
+        z-index: 99;
+        left: 15%;
+        bottom: 18%;
+        padding-left: 50px;
+        padding-right: 30px;
+        padding-top: 20px;
+    }
+
+    .nums-form {
+        margin-left: 0%;
+    }
+
+    .nums-title{
+        text-align: left;
+    }
 }
