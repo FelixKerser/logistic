@@ -6,10 +6,14 @@ html{
     color:#1A262E;
 }
 
-
+header{
+    display:flex;
+    justify-content: center;
+    margin-top:50px;
+}
 
 .all{
-    max-width:1450px;
+    max-width:1150px;
     width:90%;
     margin-left:auto;
     margin-right:auto;
@@ -22,6 +26,28 @@ html{
 }
 
 /* Header */
+.mob-lang-opener__img{
+    width: 12px;
+    margin-left: 4px;
+    transition:.2s;
+}
+
+#triangle-comp{
+    transition:.2s;
+}
+
+#mob-lang-opener{
+    display: flex;
+    align-items: center;
+}
+
+#mob-lang-open{
+    display:none;
+}
+
+.mob-lang-var{
+    color:#e4e4e4 !important;
+}
 
 li{
     list-style-type: none;
@@ -204,6 +230,7 @@ li{
     grid-template-areas: 
       ". . . ."; 
     margin-top:150px;
+    justify-items: center;
 }
 .block{
     filter: drop-shadow( 5px 10px rgb(41 35 92 / 10%));
@@ -212,7 +239,7 @@ li{
 
 .content-block{
     background: #ABDDF11A;
-    max-width: 200px;
+    width: 200px;
     height:150px;
     padding:30px 25px;
     display: flex;
@@ -258,7 +285,7 @@ li{
     background-image:url('../img/clock.png');
     position:absolute;
     background-repeat:no-repeat;
-    left:23%;
+    left:34%;
     bottom:30%;
 }
 
@@ -269,7 +296,7 @@ li{
     background-image:url('../img/chlopak.png');
     position:absolute;
     background-repeat:no-repeat;
-    left:23%;
+    left:34%;
     bottom:30%;
 }
 
@@ -280,18 +307,18 @@ li{
     background-image:url('../img/box.png');
     position:absolute;
     background-repeat:no-repeat;
-    left:23%;
+    left:34%;
     bottom:30%;
 }
 
 .fourth__logo::before{
     content:'';
-    width: 20%;
+    width: 35%;
     height:100%;
     background-image:url('../img/truck.png');
     position:absolute;
     background-repeat:no-repeat;
-    left:23%;
+    left:34%;
     bottom:30%;
 }
 
@@ -433,6 +460,7 @@ li{
 
 .gruz__list{
     width: auto;
+    margin-left: 30px;
 }
 
 .types__title{
@@ -733,8 +761,17 @@ margin-left: 1%;
     .geography{
         width: 100%;
     }
+
+    .ul__element{
+        padding:0 20px 0 20px;
+    }
 }
 
+@media screen and (max-width: 1250px) {
+    .ul__element{
+        padding:0 15px 0 15px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     .big-image-content::after{
@@ -853,7 +890,10 @@ margin-left: 1%;
     font-weight: 400;
 }
 @media screen and (max-width: 550px) {
-
+    .gruz__list{
+        width: auto;
+        margin-left: 0px;
+    }
     .heeader-element__block{
         display:block !important;
     }
@@ -878,6 +918,7 @@ margin-left: 1%;
         gap: 0px 0px;
         grid-template-areas: ".";
         margin-top: 150px;
+        justify-items: start;
     }
 
     .block{
@@ -886,7 +927,7 @@ margin-left: 1%;
     }
 
     .first__logo::before, .second__logo::before, .third__logo::before, .fourth__logo::before{
-        left: 25%;
+        left: 31%;
         width: 30%;
     }
 
@@ -1087,8 +1128,6 @@ margin-left: 1%;
     height: 398px;
     position: fixed;
     z-index: 101;
-    left: 39%;
-    bottom: 34%;
     padding-left:50px;
     padding-right:30px;
     padding-top:20px;
@@ -1102,8 +1141,6 @@ margin-left: 1%;
     height: 380px;
     position: fixed;
     z-index: 101;
-    left: 39%;
-    bottom: 34%;
     padding-left:50px;
     padding-right:30px;
     padding-top:20px;
@@ -1121,8 +1158,6 @@ margin-left: 1%;
     height: 310px;
     position: fixed;
     z-index: 101;
-    left: 39%;
-    bottom: 34%;
     padding-left:50px;
     padding-right:30px;
     padding-top:20px;
@@ -1147,8 +1182,6 @@ margin-left: 1%;
     height:550px;
     position: fixed;
     z-index: 101;
-    left:37%;
-    bottom:15%;
     padding-left:50px;
     padding-right:50px;
     padding-top:20px;
@@ -1240,6 +1273,51 @@ margin-left: 1%;
     margin-bottom: 15px;
 }
 
+.popup {
+    display: none;
+    position: fixed; top: 0; left: 0;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .popup figure {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .popup div, #popup figcaption, #popup figure:before {
+    background: #fff;
+  }
+  .popup figure:before { /* стиль кнопки "закрыть" */ 
+    content: "закрыть";
+    display: block;
+    padding: 0 1%;
+    border-width: 4px 4px 0 4px;
+    border-radius: 5px 5px 0 0;
+    text-align: right;
+    color: rgb(88,125,164);
+  }
+ .popup div, #popup figcaption {
+    cursor: default;
+  }
+  .popup figcaption {
+    position: relative;
+    border-width: 0 4px 0 4px;
+    font-size: 150%;
+    text-transform: uppercase;
+    color: rgb(100,100,100);
+  }
+ .popup figcaption:before { /* стиль восклицательного знака, не поддерживается Google Chrome. Его можно заменить на что-то более приемлемое */ 
+    content: "\26a0 \20 \20";
+    color: red;
+    font-size: 150%;
+    vertical-align: middle;
+  }
+.popup div {
+  }
+
 /* scrollup */
 
 #myBtn {
@@ -1248,7 +1326,7 @@ margin-left: 1%;
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
-    right: 90px; /* Place the button 30px from the right */
+    right: 20px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
@@ -1261,6 +1339,7 @@ margin-left: 1%;
     background-size: contain;
     transition:.5s;
     opacity:.3;
+    background-repeat: no-repeat;
 }
 
 #myBtn:hover{
@@ -1269,7 +1348,6 @@ margin-left: 1%;
 
 @media screen and (max-width: 550px) {
     #myBtn{
-        background-repeat: no-repeat;
         width: 67px;
     height: 65px;
     }
@@ -1301,8 +1379,6 @@ margin-left: 1%;
         height: 577px;
         position: fixed;
         z-index: 101;
-        left: 13%;
-        bottom: 7%;
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
@@ -1316,8 +1392,6 @@ margin-left: 1%;
         height: 431px;
         position: fixed;
         z-index: 99;
-        left: 13%;
-        bottom: 16%;
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
@@ -1331,8 +1405,6 @@ margin-left: 1%;
         height: 299px;
         position: fixed;
         z-index: 99;
-        left: 13%;
-        bottom: 30%;
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
@@ -1357,8 +1429,6 @@ margin-left: 1%;
         height: 412px;
         position: fixed;
         z-index: 99;
-        left: 15%;
-        bottom: 18%;
         padding-left: 50px;
         padding-right: 30px;
         padding-top: 20px;

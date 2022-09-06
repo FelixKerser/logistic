@@ -13,10 +13,7 @@
 
 </head>
 <body>
-    
-    <div class="all">
-        
-        <header id="header">
+            <header id="header">
 
             <div id="mob-menu">
                 <div class="mob-list">
@@ -34,7 +31,11 @@
                             <a class="mob__a" href="#">Контакты</a>
                         </li>
                         <li class="mob__element">
-                            <a class="mob__a" href="#">RU</a>
+                            <span id="mob-lang-opener" class="mob__a">RU <img src="img/triangle.png" id="mob-triangle" class="mob-lang-opener__img"></span>
+                            <div id="mob-lang-open">
+                                <a href="#" class="mob-lang-var mob__a">UK</a><br/>
+                                <a href="#" class="mob-lang-var mob__a">ENG</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +75,7 @@
                 <li class="ul__element">
                     <div id="lang-id" class="lang">
                         <div class="lang-content">
-                            <a class="lang-now">RU</a>
+                            <a class="lang-now">RU <img src="img/triangle.png" id="triangle-comp" class="mob-lang-opener__img"></a>
                         </div>
                         <div id="raskr-id" class="raskr">
                             <a href="#" class="lang-var">UK</a><br/>
@@ -132,7 +133,7 @@
             </ul>
 
             <!--forms-->
-            <div id="wrapper">
+            <div id="popup4" class="popup">
             <div id="show-more">
                 <div class="form-content">
                     <a id="x-btn4" class="x-btn">
@@ -183,7 +184,7 @@
             </div>
             </div>
 
-            <div id="wrapper2">
+            <div id="popup2" class="popup">
             <div id="zakaz-consl">
                 <div class="form-content">
                     <a id="x-btn3" class="x-btn">
@@ -211,7 +212,7 @@
             </div>
             </div>
 
-            <div id="wrapper3">
+            <div id="popup1" class="popup">
                 <div id="how-much-form">
                     <div class="form-content">
                         <a id="x-btn" class="x-btn">
@@ -241,7 +242,7 @@
                 </div>
             </div>
 
-            <div id="wrapper4">
+            <div id="popup3" class="popup">
                 <div id="order-call">
                     <div class="form-content">
                         <a id="x-btn2" class="x-btn">
@@ -268,6 +269,9 @@
             <!--forms-->
 
         </header>
+    <div class="all">
+        
+
 
         <div class="main-content">
             <!--first block-->
@@ -294,8 +298,8 @@
                 <div class="first-block block">
                     <div class="first__logo">
                         <div class="content-first content-block path-first-type">
-                            <span class="block__num">
-                                15
+                            <span data-to="15" data-stop="0" class="counter block__num">
+                                0
                             </span>
                             <span class="block__second">
                                 Лет
@@ -311,7 +315,7 @@
                     <div class="second__logo">
                         <div class="content-second content-block path-second-type">
                             <span class="block__num">
-                                400+
+                                <span data-to="400" data-stop="0" class="counter">0</span>+
                             </span>
                             <span class="block__second">
                                 Клиентов
@@ -326,8 +330,8 @@
                 <div class="third-block block">
                     <div class="third__logo">
                         <div class="content-third content-block path-first-type">
-                            <span class="block__num">
-                                938+
+                            <span  class="block__num">
+                                <span data-to="938" data-stop="0" class="counter">0</span>+
                             </span>
                             <span class="block__second">
                                 Видов груза
@@ -343,7 +347,7 @@
                     <div class="fourth__logo">
                         <div class="content-fourth content-block path-second-type">
                             <span class="block__num">
-                                3 000+
+                                <span data-to="3000" data-stop="0" class="counter">0</span>+
                             </span>
                             <span class="block__second">
                                 Машин
@@ -675,5 +679,6 @@
             <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
         </footer>
     </div>
+        
 </body>
 </html>
