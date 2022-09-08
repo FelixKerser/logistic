@@ -4,6 +4,7 @@ html{
     background: white;
     font-family: 'Nunito', sans-serif;
     color:#1A262E;
+    overflow-x: hidden;
 }
 
 header{
@@ -871,15 +872,11 @@ margin-left: 1%;
         background-position: 180%;
     }
 }
+
 #mob-menu{
     display:none;
-    position: absolute;
-    background:#5589C9;
-    border-radius: 20px;
-    left: 45%;
-    width:250px;
-    z-index: 50;
 }
+
 
 .mob__element{
     margin-bottom:15px;
@@ -914,13 +911,13 @@ margin-left: 1%;
     }
 
     .big-image__img{
-        width: 100vw;
+        width: 80vw;
     }
 
     .big-image-content::after{
-        font-size: 40px;
+        font-size: 33px;
         margin: 0px;
-        left: 64%;
+        left: 70%;
     }
 
     .hello{
@@ -1364,7 +1361,24 @@ margin-left: 1%;
 }
 
 @media screen and (max-width: 550px) {
-    header{
+    html, body{
+        overflow-x: hidden;
+    }
+
+    #mob-menu{
+        transform: translateX(101%);
+        display:block;
+        position: absolute;
+        background:#5589C9;
+        border-radius: 20px;
+        left: 45%;
+        width:250px;
+        z-index: 50;
+        transition: .5s;
+    }
+
+    .banner__img{
+        width: -webkit-fill-available;
     }
 
     #myBtn{
@@ -1497,7 +1511,7 @@ margin-left: 1%;
 }
 
 .why-topic{
-    margin-top:50px;
+    margin-top:100px;
 }
 
 .why-we{
@@ -1580,6 +1594,112 @@ margin-left: 1%;
     bottom:10%;
 }
 
+.default-text__text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.default-text__text-special{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.default-text__content{
+    margin-bottom:30px;
+}
+
+.default-text__special{
+    background: rgba(171, 221, 241, 0.1);
+    box-shadow: -4px 4px 4px rgba(41, 35, 92, 0.1);
+    border-radius: 15px;
+    padding:30px 50px;
+}
+
+.our-team{
+    margin-top:50px;
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 40px; 
+    grid-template-areas: 
+      ". . . ."; 
+    justify-items: center;
+}
+
+.member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-photo{
+    filter: drop-shadow(-4px 4px 4px rgba(41, 35, 92, 0.1));
+    border-radius: 15px;
+}
+
+.member-photo__img{
+    border-radius: 15px;
+    width: 250px;
+}
+
+.member-job{
+    margin-top:18px;
+    margin-bottom:18px;
+}
+
+.member-job__text{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 27px;
+}
+
+.member-name__text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.widget-zakaz{
+    margin-top:90px;
+    margin-bottom:120px;
+}
+
+.widget-content{
+    background: rgba(171, 221, 241, 0.1);
+    box-shadow: -4px 4px 4px rgba(41, 35, 92, 0.1);
+    border-radius: 50px;
+    padding:60px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget-img__img{
+    width: 400px;
+    height:auto;
+}
+
+.widget-submit{
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+    border-radius: 12px;
+    padding: 18px 32px;
+    height:70px;
+}
+
+.widget__title{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+}
+
+.widget-form{
+    width: 400px;
+}
+
 @media screen and (max-width: 550px) {
     .why-we{
         margin-top:80px;
@@ -1593,7 +1713,49 @@ margin-left: 1%;
         justify-items: center;
     }
 
+    .our-team{
+        margin-top:50px;
+        display: grid; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 0px 40px; 
+        grid-template-areas: 
+          "."; 
+        justify-items: center;
+    }
+
+    .member{
+        margin-top:50px;
+    }
+
     .why__description{
         font-size: 18px;
+    }
+
+    .widget-content{
+        flex-direction: column;
+    }
+
+    .widget-img{
+        margin-bottom:50px;
+    }
+
+    .widget-img__img{
+        width: 275px;
+    }
+
+    .widget-form{
+        width:300px;
+    }
+
+    .widget-submit{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .widget-form{
+        width:255px;
     }
 }

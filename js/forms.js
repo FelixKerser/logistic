@@ -51,13 +51,13 @@ document.getElementById('lang-id').addEventListener("mouseout",function() {
 })
 
 let burger_open = function(){
-    document.getElementById('mob-menu').style.display = 'block';
+    document.getElementById('mob-menu').style.transform = 'translateX(0%)';
     document.getElementById('burger-icon').style.display = 'none';
     document.getElementById('x-icon').style.display = 'block';
 }
 
 let burger_close = function(){
-    document.getElementById('mob-menu').style.display = 'none';
+    document.getElementById('mob-menu').style.transform = 'translateX(101%)';
     document.getElementById('burger-icon').style.display = 'block';
     document.getElementById('x-icon').style.display = 'none';
 }
