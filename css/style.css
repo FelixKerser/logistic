@@ -448,14 +448,18 @@ li{
 
 .geography__item::before{
     content:'';
-    width:100%;
+    width:5%;
     height:100%;
     background-repeat: no-repeat;
     background-image:url('../img/arrow.png');
     position: absolute;
-    right: 6%;
+    right: 100%;
     bottom: -15%;
 }  
+
+.geograph-item__a{
+    color:black;
+}
 
 .gruz{
     margin-left:0;
@@ -1701,6 +1705,7 @@ margin-left: 1%;
 }
 
 @media screen and (max-width: 550px) {
+
     .why-we{
         margin-top:80px;
         display: grid; 
@@ -1757,5 +1762,78 @@ margin-left: 1%;
 @media screen and (max-width: 450px) {
     .widget-form{
         width:255px;
+    }
+
+    .post-wiget-img__img{
+        width: 350px;
+    }
+}
+
+/* post */
+
+.post-elements{
+    margin-top:30px;
+    margin-left:35px;
+}
+
+.post__element{
+    margin-top:30px;
+    position:relative;
+}
+
+.post__item{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.post__item::before{
+    content:'';
+    width:5%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-image:url('../img/arrow.png');
+    position: absolute;
+    right: 98%;
+    bottom: 0%;
+}  
+
+.post-description{
+    margin-top:40px;
+}
+
+.post-description__text{
+    margin-top:50px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.middle-banner{
+    margin-top:50px;
+}
+
+.post-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-widget-content{
+    background:white;
+    box-shadow:none;
+}
+
+.post-wiget-img__img{
+    width: 500px;
+}
+
+@media screen and (max-width: 550px) {
+    .post-wiget-img__img{
+        width: 350px;
+    }
+
+    .post-widget-img{
+        margin-left: -35px;
     }
 }
