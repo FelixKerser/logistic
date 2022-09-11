@@ -776,6 +776,27 @@
                 }
             });
             });
+
+            $(document).ready(function(){
+                $('.hello').viewportChecker({
+                // Class to add to the elements when they are visible
+                classToAdd: 'visible',
+                
+                // The offset of the elements (let them appear earlier or later)
+                offset: 100,
+                
+                // Add the possibility to remove the class if the elements are not visible
+                repeat: false,
+                
+                 // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+                callbackFunction: function(elem, action){
+                    document.getElementById('big-yellow-mark__img').style.transform = 'translateY(-0%)';
+                    document.getElementById('big-car__img').style.transform = 'translateX(-0%)';
+                    document.getElementById('small-mark1__img').style.transform = 'translateY(-0%)';
+                    document.getElementById('small-mark2__img').style.transform = 'translateY(-0%)';
+                }
+            });
+            });
             </script>
         </footer>
     </div>
