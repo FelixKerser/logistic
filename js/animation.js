@@ -1,5 +1,4 @@
 (function(){
-
     let counter = document.querySelectorAll('.counter');
     let limit = 0; // Переменная, чтобы останавливать функцию, когда всё запустится.
     window.addEventListener('scroll', function(){  
@@ -20,6 +19,8 @@
               //Как только досчитали - стираем интервал.
               counter[i].innerText = counter[i].dataset.to;
               clearInterval(int);
+              document.getElementById('mapa__img').style.transform = 'translateY(-0%)';
+              document.getElementById('green-mark').style.transform = 'translateY(200%)';
             }
           }, 60);
         }
@@ -42,3 +43,8 @@ let mob_lang_list_open = function(){
 }
 
 mob_lang_open.onclick = mob_lang_list_open;
+
+document.getElementById('big-yellow-mark__img').style.transform = 'translateY(-0%)';
+document.getElementById('big-car__img').style.transform = 'translateX(-0%)';
+document.getElementById('small-mark1__img').style.transform = 'translateY(-0%)';
+document.getElementById('small-mark2__img').style.transform = 'translateY(-0%)';
