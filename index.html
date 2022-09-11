@@ -753,7 +753,12 @@
                 
                  // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
                 callbackFunction: function(elem, action){
-                    document.getElementById('green-mark').style.transform = 'translateY(200%)';
+                    if(window.innerWidth < '950'){
+                        document.getElementById('green-mark').style.transform = 'translateY(80%)';
+                    } else{
+                        document.getElementById('green-mark').style.transform = 'translateY(200%)';
+                    }
+                    
                 }
             });
             });
