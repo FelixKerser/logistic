@@ -423,7 +423,7 @@
             </div>
 
             <!--fifth block-->
-            <div class="geography">
+            <div class="geography green-mark-block">
                 <div class="geography-content">
                     <div class="geograpy-img">
                         <img id="green-mark" src="img/green-mark.png">
@@ -455,7 +455,7 @@
                 </div>
             </div>
 
-            <div class="geography">
+            <div class="geography strange-truck-block">
                 <div class="geography-content">
 
                     <div class="gruz__list geography__list">
@@ -481,7 +481,8 @@
 
                     </div>
                     <div class="geograpy-img">
-                        <img class="gruz geography-img__img" src="img/gruz.png">
+                        <img id="strange__truck" src="img/strange-truck.png"/>
+                        <img class="gruz geography-img__img" src="img/strange-bg.png">
                     </div>
                 </div>
             </div>
@@ -564,10 +565,11 @@
                 </div>
             </div>
 
-            <div class="geography" id="uslugi-block">
+            <div class="geography  czlowieku-block" id="uslugi-block">
                 <div class="geography-content">
                     <div class="geograpy-img">
-                        <img class="logistic-img__img geography-img__img" src="img/logistic.png">
+                        <img id="czlowieku" src="img/czlowiek.png">
+                        <img class="logistic-img__img geography-img__img" src="img/planszet.png">
                     </div>
 
                     <div class="geography__list">
@@ -685,7 +687,8 @@
             <script src="js/footer.js"></script>
             <script src="js/burger.js"></script>
             <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script type="text/javascript">
                 $(document).ready(function(){
                    $("#list-jq").on("click","a", function (event) {
@@ -696,6 +699,84 @@
                    });
                });
                </script>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $('.strange-truck-block').viewportChecker({
+                // Class to add to the elements when they are visible
+                classToAdd: 'visible',
+                
+                // The offset of the elements (let them appear earlier or later)
+                offset: 100,
+                
+                // Add the possibility to remove the class if the elements are not visible
+                repeat: false,
+                
+                 // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+                callbackFunction: function(elem, action){
+                    document.getElementById('strange__truck').style.transform = 'translateX(0%)';
+                }
+            });
+            });
+
+
+            $(document).ready(function(){
+                $('.mapa').viewportChecker({
+                // Class to add to the elements when they are visible
+                classToAdd: 'visible',
+                
+                // The offset of the elements (let them appear earlier or later)
+                offset: 100,
+                
+                // Add the possibility to remove the class if the elements are not visible
+                repeat: false,
+                
+                 // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+                callbackFunction: function(elem, action){
+                    document.getElementById('mapa__img').style.transform = 'translateY(-0%)';
+                }
+            });
+            });
+
+
+
+            $(document).ready(function(){
+                $('.green-mark-block').viewportChecker({
+                // Class to add to the elements when they are visible
+                classToAdd: 'visible',
+                
+                // The offset of the elements (let them appear earlier or later)
+                offset: 100,
+                
+                // Add the possibility to remove the class if the elements are not visible
+                repeat: false,
+                
+                 // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+                callbackFunction: function(elem, action){
+                    document.getElementById('green-mark').style.transform = 'translateY(200%)';
+                }
+            });
+            });
+
+
+            $(document).ready(function(){
+                $('.czlowieku-block').viewportChecker({
+                // Class to add to the elements when they are visible
+                classToAdd: 'visible',
+                
+                // The offset of the elements (let them appear earlier or later)
+                offset: 100,
+                
+                // Add the possibility to remove the class if the elements are not visible
+                repeat: false,
+                
+                 // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+                callbackFunction: function(elem, action){
+                    document.getElementById('czlowieku').style.transform = 'translateX(101%)';
+                }
+            });
+            });
+            </script>
         </footer>
     </div>
         
