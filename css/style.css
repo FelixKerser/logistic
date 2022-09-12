@@ -965,6 +965,18 @@ margin-left: 1%;
     font-weight: 400;
 }
 @media screen and (max-width: 550px) {
+    #big-image__img{
+        width:350px;
+    }
+
+    #big-yellow-mark__img{
+        width: 70px;
+    }
+
+    #big-car__img{
+        width: 226px;
+    }
+
     .gruz__list{
         width: auto;
         margin-left: 0px;
@@ -1176,6 +1188,9 @@ margin-left: 1%;
         height:auto;
         margin-top:10px;
         margin-right:10px;
+    }
+    #strange__truck{
+        width: 295px;
     }
 
 }
