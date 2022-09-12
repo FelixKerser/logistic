@@ -691,7 +691,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script type="text/javascript">
                 $(document).ready(function(){
-                   $("#list-jq").on("click","a", function (event) {
+                   $("#list-jq").on("click","a[href^='#']", function (event) {
                        event.preventDefault();
                        var id  = $(this).attr('href'),
                            top = $(id).offset().top;
@@ -802,6 +802,7 @@
                 }
             });
             });
+            
             </script>
         </footer>
     </div>
