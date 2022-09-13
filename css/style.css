@@ -228,7 +228,7 @@ li{
 .calculator__text-small{
     font-weight: 600;
     font-size: 20px;
-    line-height: 0px;
+    line-height: 20px;
     padding-top: 15px;
 }
 
@@ -965,7 +965,7 @@ margin-left: 1%;
     font-size:25px;
     font-weight: 400;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1024px) {
     #big-image__img{
         width:350px;
     }
@@ -1023,7 +1023,8 @@ margin-left: 1%;
         gap: 0px 0px;
         grid-template-areas: ".";
         margin-top: 150px;
-        justify-items: start;
+        justify-items: center;
+        margin-right: 100px;
     }
 
     .block{
@@ -1457,6 +1458,11 @@ margin-left: 1%;
 @media screen and (max-width: 550px) {
     html, body{
         overflow-x: hidden;
+    }
+
+    .blocks-info {
+        margin-right: 0px;
+        justify-items: start;
     }
 
     #mob-menu{
